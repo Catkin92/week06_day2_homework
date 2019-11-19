@@ -2,7 +2,9 @@ const Decorator = function () {
   this.stock = [];
 };
 
-
+Decorator.prototype.addStock = function (stock) {
+  this.stock.push(stock);
+};
 
 module.exports = Decorator;
 
