@@ -1,9 +1,9 @@
 const Paint = function (litres) {
-  this.litres = `${litres}l`;
+  this.litres = litres;
 };
 
 Paint.prototype.isEmpty = function () {
-  if(this.litres === '0l') {
+  if(this.litres === 0) {
     return true;
   }
   else {
@@ -12,7 +12,7 @@ Paint.prototype.isEmpty = function () {
 };
 
 Paint.prototype.empty = function () {
-  this.litres = `0l`
+  this.litres = 0
 };
 
 module.exports = Paint;
