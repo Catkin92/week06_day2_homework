@@ -2,6 +2,18 @@ const Paint = function (litres) {
   this.litres = `${litres}l`;
 };
 
+Paint.prototype.isEmpty = function () {
+  if(this.litres === '0l') {
+    return true;
+  }
+  else {
+    return false
+  };
+};
+
+Paint.prototype.empty = function () {
+  this.litres = `0l`
+};
 
 module.exports = Paint;
 
